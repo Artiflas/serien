@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lieblings-Serien</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal" id="add-modal">
+      <div class="modal__content">
+        <label for="title">Name der Serie</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">Link Bild</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label for="rating">Deine Bewertung</label>
+        <input
+          type="number"
+          step="1"
+          max="5"
+          min="1"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Abbrechen</button>
+        <button class="btn btn--success">Hinzufügen</button>
+      </div>
+    </div>
+    <div class="modal" id="delete-modal">
+      <h2 class="modal__title">Bist Du sicher?</h2>
+      <p class="modal__content">
+        Bist Du sicher, dass Du das Element löschen möchtest? Dies kann nicht
+        Rückgängig gemacht werden!
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Nein</button>
+        <button class="btn btn--danger">Ja</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>Lieblings-Serien</h1>
+      <button>Hinzufügen</button>
+    </header>
+
+    <main>
+      <section id="entry-text" class="card">
+        <p>Persönliche Serien Datenbank</p>
+      </section>
+      <ul id="movie-list"></ul>
+    </main>
+  </body>
+</html>
